@@ -1,0 +1,12 @@
+body{
+    display:flex;
+    flex-direction: column;
+    background-color:rgb(86, 112, 150);
+}
+
+.container-for-clock{
+    align-items: center;
+    justify-items: center;
+    color: white;
+    
+}

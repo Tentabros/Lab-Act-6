@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Login page </title>
+<style>
+
+    
+
+    body {
+    background-color: rgb(139, 167, 177);
+    display:grid;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    grid-template-columns: 0.8fr 1fr 0.8fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    }
+    h1 {
+        color: white; 
+        text-align: center;
+        font-size: 70px;
+    }
+    p { font-family:
+    verdana; font-size:
+    20px;
+    }
+
+    form{
+        text-align: center;
+        justify-content: center;
+        border: 5px rgb(48, 47, 47) solid;
+        padding: 10px;
+    }
+
+    .container{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .nav{
+    grid-column: 1;
+    grid-row: 1 / 4;  
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;         
+    line-height: 0.9;  
+    color:rgb(117, 117, 207);
+    }
+
+    .nav-right{
+    grid-column: 3;
+    grid-row: 1 / 4;  
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;         
+    line-height: 0.9;  
+    color:rgb(117, 117, 207);
+    }
+
+</style>
+    <script language="javascript">
+        function check(form) /*function to check userid & password*/ {
+        /*the following code checkes whether the entered userid and password are
+        matching*/
+            if(form.userid.value == "reuel" && form.pswrd.value == "123456789")
+                {
+                window.open("https://www.google.com", "_blank"); /*opens
+                the target page while Id & password matches*/
+                }
+            else
+                {
+                alert("Error Password or Username") /*displays error message*/
+                }
+        }
+    </script>
+</head>
+<body>
+    <h1 class="nav">f<br>a<br>c<br>e<br>b<br>o<br>o<br>k</h1>
+    <div class="container">
+        <h1> Validate Credentials </h1>
+        <form name="login">
+        Username: <input type="text" name="userid"/> <br><br>
+        Password: <input type="password" name="pswrd"/><br><br>
+        <input type="button" onclick="check(this.form)" value="Login"/>
+        <input type="reset" value="Cancel"/>
+        </form>
+    </div>
+     <h1 class="nav-right">l<br>o<br>g<br>i<br>n<br></h1>
+</body>
+</html>
