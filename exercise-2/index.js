@@ -18,12 +18,12 @@ function startTime(){
     seconds = checkTime(seconds);
 
     if(am_pm == 'AM' && hour > 0){
-        messagebox = "Good Morning!";
+        messagebox = "Good Morning_";
     }else{
         if(hour < 6){
-            messagebox = "Good Afternoon!";
+            messagebox = "Good Afternoon_";
         }else{
-            messagebox = "Good Evening";
+            messagebox = "Good Evening_";
         }
     }
 

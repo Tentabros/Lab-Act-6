@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+
+</head>
+
+<body>
+    <body onload="checkPosition()">
+    <div id="box" class="box"></div>
+
+    <div id="ball" class="ball"></div>
+
+    <script>
+        // Task 1: Get Position
+        function checkPosition() {
+            let box = document.getElementById("box");
+            let position = box.getBoundingClientRect();
+            // Fixed the "onsole" typo to "console"
+            console.log("Box Position:", position.left, position.top);
+        }
+
+        // Task 2: Bouncing/Moving Ball
+        let y = 110;
+        let direction = 1; // 1 for top and bottom
+        
+        setInterval(() => {
+            y += (5 * direction);
+            let ball = document.getElementById("ball");
+            ball.style.top = y + "px";
+
+
+            // Simple bounce logic: if it hits 400px, go back
+            if (y > 400 || y < 100) {
+                direction *= -1;
+            }
+        }, 50);
+    </script>
+</body>
+</body>
+</html>
